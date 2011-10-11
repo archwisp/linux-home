@@ -1,0 +1,10 @@
+[user]
+	name = Bryan C. Geraghty
+   email = bryan@ravensight.org
+[core]
+   pager = vim -R -
+[receive]
+   denyNonFastForwards = false
+
+[url "ssh://dev.upandrunningsoftware.com/"]
+   pushInsteadOf = git://dev.upandrunningsoftware.com/
