@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/bryan/.subversion/auth'
-let g:netrw_dirhist_2='/home/bryan/.subversion/auth/svn.username'
-let g:netrw_dirhist_3='/home/bryan/stuff/upandrunning/blusolutions'
-let g:netrw_dirhist_4='/usr/upandrunning/hri/Horizon-Research_SVN/horizon-research/web/survey2012/htdocs-branch/system/application/config'
-let g:netrw_dirhist_5='/usr/upandrunning/authorization-example/Authorization'
-let g:netrw_dirhist_6='/home/bryan/.vim/indent'
