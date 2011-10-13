@@ -9,6 +9,8 @@ alias ls="ls --color=auto"
 alias phpsearch="fgrep --color=auto -Rin --include=*.php --include=*.phtml"
 alias screen="screen -mRR"
 
+export EDITOR=vim
+
 COLOR_RED="\[\e[31;40m\]"
 COLOR_GREEN="\[\e[32;40m\]"
 COLOR_YELLOW="\[\e[33;40m\]"
