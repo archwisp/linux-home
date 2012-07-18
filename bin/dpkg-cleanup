@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PROGS=$(dpkg --list | grep "^rc" | awk 'BEGIN { FS=" " }; { print $2 };');
+
+for PROG in $PROGS;
+do
+   echo dpkg --purge $PROG;
+done

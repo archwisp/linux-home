@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while [  0 = 0 ]; do
+    wc -l $1;
+    sleep 3;
+done

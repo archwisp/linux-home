@@ -1,0 +1,14 @@
+#!/bin/bash
+# Author :: Bryan Geraghty
+# Date :: 2007-09-12
+# Notes :: This script resets permissions
+
+source /usr/ravensight/lib/aclfunctions.bash
+
+if [ -z $1 ]; then
+	DIR='.';
+else
+	DIR=$1;
+fi
+
+grantUserRead 'apache' $DIR '*';
