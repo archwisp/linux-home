@@ -6,8 +6,12 @@ HISTFILESIZE=2000
 alias fgrep="fgrep --color=auto"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
-alias phpsearch="fgrep --color=auto -Rin --include=*.php --include=*.phtml"
+alias phpsearch="fgrep --color=auto -Rn --include=*.php --include=*.phtml"
+alias pysearch="fgrep --color=auto -Rn --include=*.py --include=*.pm"
 alias screen="screen -mRR"
+alias svnstat="svn status --ignore-externals"
+alias svnup="svn up --ignore-externals"
+# alias git="git --no-pager"
 
 export EDITOR=vim
 
