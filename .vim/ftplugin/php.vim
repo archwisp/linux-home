@@ -16,7 +16,7 @@ set makeprg=php\ -l\ %
 nnoremap ,r :!php %<CR>
 
 " Perform codecheck
-nnoremap ,v :!./bin/codecheck %<CR>
+nnoremap ,v :!phpcs %<CR>
 
 " Run unit test
 nnoremap ,u :!./bin/runtests %<CR>
@@ -69,22 +69,3 @@ function! PhpBlockSelect(mode)
 
 	return motion
 endfunction
-
-" Mappings to select full/inner PHP block
-nmap <silent> <expr> vaP PhpBlockSelect(1)
-nmap <silent> <expr> viP PhpBlockSelect(0)
-
-" Mappings for operator mode to work on full/inner PHP block
-omap <silent> aP :silent normal vaP<CR>
-omap <silent> iP :silent normal viP<CR>
-
-" Mappings for PHP Documentor for VIM
-inoremap <buffer> <C-P> <Esc>:call PhpDocSingle()<CR>i
-nnoremap <buffer> <C-P> :call PhpDocSingle()<CR>
-vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
-
-" Generate @uses tag based on inheritance info
-let g:pdv_cfg_Uses = 1
-
-" Set default Copyright
-let g:pdv_cfg_Copyright = "Copyright (C) 2006 Andrei Zmievski"
