@@ -2,9 +2,12 @@
 	name = Bryan C. Geraghty
    email = bryan@ravensight.org
 [core]
-   pager = vim -R -
+   pager =
 [receive]
    denyNonFastForwards = false
 
 [url "ssh://dev.upandrunningsoftware.com/"]
    pushInsteadOf = git://dev.upandrunningsoftware.com/
+[alias]
+    info = config --local --list
+    svn-log = log --name-status
