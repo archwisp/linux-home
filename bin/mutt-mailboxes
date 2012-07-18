@@ -1,0 +1,9 @@
+#!/usr/bin/php 
+<?php // vim:ft=php:
+
+chdir(dirname($argv[0]));
+set_include_path('../lib');
+require_once 'MindFrame2/AutoLoad.php';
+MindFrame2_AutoLoad::install();
+
+echo MuttMailboxes::getList('/home/bryan/mail', '+', NULL);

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for FILE in `find -name '*.php'`
+do
+	if ! php -l $FILE > /dev/null
+	then
+		php -l $FILE;
+		exit;
+	fi
+done

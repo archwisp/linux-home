@@ -1,0 +1,19 @@
+#!/usr/bin/php
+<?php // :vim:ft=php:
+
+chdir(dirname($argv[0]));
+set_include_path('../lib');
+require_once 'MindFrame2/AutoLoad.php';
+MindFrame2_AutoLoad::install();
+
+$source = array_key_exists(1, $argv) ? $argv[1] : NULL;
+$destination = array_key_exists(2, $argv) ? $argv[2] : NULL;
+
+if ($argc !== 3)
+{
+   printf("Usage: %s <source> <destination>\n", basename($argv[0]));
+   exit;
+}
+
+$md = new CanonVsVideoDownloader();
+$md->download($source, $destination);

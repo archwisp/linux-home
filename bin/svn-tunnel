@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PROXY_HOST=$1;
+SVN_HOST=$2;
+
+ssh -f $PROXY_HOST -L 7000:$SVN_HOST:80 -N

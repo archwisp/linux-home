@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find -L -name '*.php' -exec cat {} \; | sed '/^$/d' | wc -l

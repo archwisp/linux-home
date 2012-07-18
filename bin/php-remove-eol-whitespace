@@ -1,0 +1,18 @@
+#!/bin/bash 
+# vim:ft=sh:ts=3:sts=3:sw=3:et: 
+
+###
+# Removes any end-of-line whitespace from php files in the current working directory
+# and sub-directories
+#
+# Author: Bryan C. Geraghty <bryan@ravensight.org>
+# Date: 2009-10-28
+##
+
+FILES=$(grep -rl --include=*\.php '\s\+$' .);
+
+for FILE in $FILES;
+do
+   echo "Removing EOL whitespace from file $FILE...";
+   sed -i 's/\s\+$//g' $FILE;
+done

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+find -name "*.jpg" | fgrep '/Export/' | \
+sed -e 's:\.\(/.*/.*\)/.*\(/.*\):mkdir -p "../Photos - Export\1" \&\& mv "\0" "../Photos - Export\1\2":'
+
+find -name "*.jpg" | fgrep '/Preview/' | \
+sed -e 's:\.\(/.*/.*\)/.*\(/.*\):mkdir -p "../Photos - Export\1/Preview" \&\& mv "\0" "../Photos - Export\1/Preview\2":'
+
+sleep 5
+
+find ../Photos\ -\ Export/ -name Preview -exec attrib +H {} \;

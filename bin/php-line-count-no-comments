@@ -1,0 +1,10 @@
+#!/bin/bash
+
+find -L -name '*.ph*' -exec cat {} \; \
+| sed '/^$/d' \
+| sed '/\/\*/d' \
+| sed '/\s\*/d' \
+| sed '/\s\/\//d' \
+| sed '/<?/d' \
+| sed '/?>/d' \
+| wc -l

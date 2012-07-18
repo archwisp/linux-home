@@ -1,0 +1,13 @@
+#!/bin/bash
+
+FILETYPES="--include=*.yml";
+
+SEARCH=$1;
+REPLACE=$2;
+
+FILES=$(fgrep -Rl $FILETYPES "$SEARCH" . | uniq);
+
+for FILE in $FILES;
+do
+   echo sed -i "'s/$1/$2/g'" $FILE;
+done;

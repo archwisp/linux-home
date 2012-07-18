@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SEARCH=$1;
+REPLACE=$2;
+
+FILES=$(find -name "*$SEARCH*.php");
+
+for FILE in $FILES;
+do
+   NEWFILE=`echo $FILE | sed "s/$1/$2/"`;
+   echo "Renaming $FILE to $NEWFILE";
+   mv $FILE $NEWFILE;
+done;

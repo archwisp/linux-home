@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+	DIR='.';
+else
+	DIR=$1;
+fi
+
+find $1 -name '*.php' -exec echo {} \; \
+| sed -r 's/^(\.\/*.*?\/)(.*)/ln -fs \2 \1\2s/' \
+| bash

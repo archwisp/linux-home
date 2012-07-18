@@ -1,0 +1,10 @@
+#!/bin/bash
+
+function pushEnvironment
+{
+   echo Pushing environment to $1...;
+   rsync --exclude=.svn -av ~/.screenrc ~/.bashrc ~/.vim $1:~/;
+   echo;
+}
+
+pushEnvironment $1;
