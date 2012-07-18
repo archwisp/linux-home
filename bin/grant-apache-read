@@ -11,4 +11,4 @@ else
 	DIR=$1;
 fi
 
-grantUserRead 'nobody' $DIR '*';
+grantUserRead 'www-data' $DIR '*';
