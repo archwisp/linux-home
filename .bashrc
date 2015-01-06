@@ -1,19 +1,27 @@
+if [[ "$WINDOW" = "" ]]; then WINDOW="none"; fi
+export HISTFILE=~/.bash_history.$WINDOW;
+
 shopt -s histappend
 
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 alias fgrep="fgrep --color=auto"
 alias grep="grep --color=auto"
-alias ls="ls --color=auto"
+#alias ls="ls --color=auto"
 alias phpsearch="fgrep --color=auto -Rn --include=*.php --include=*.phtml"
 alias pysearch="fgrep --color=auto -Rn --include=*.py --include=*.pm"
 alias screen="screen -mRR"
 alias svnstat="svn status --ignore-externals"
 alias svnup="svn up --ignore-externals"
 # alias git="git --no-pager"
+alias gpgswitchcurses='echo "pinentry-program /usr/bin/pinentry-curses" > /home/username/.gnupg/gpg-agent.conf ; gpgconf --reload gpg-agent'
 
+export CLICOLOR=1
 export EDITOR=vim
+export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_25
+export PATH=$PATH:"/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH=$PATH:/home/bryan/.gem/ruby/1.9.2/bin
 
 COLOR_RED="\[\e[31;40m\]"
 COLOR_GREEN="\[\e[32;40m\]"
@@ -52,7 +60,8 @@ promptFunc()
     fi
 }
 
-PROMPT_COMMAND=promptFunc
+PROMPT_COMMAND="promptFunc; history -a";
+#PROMPT_COMMAND="promptFunc;";
 
 ###
 # Auto-screen invocation. 
