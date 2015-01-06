@@ -11,3 +11,4 @@
 [alias]
     info = config --local --list
     svn-log = log --name-status
+    tracked = status --untracked-files=no
