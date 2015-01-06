@@ -20,4 +20,4 @@ nnoremap ,m :!asciidoc -a asciimath %<CR>
 nnoremap ,s :!aspell -c %<CR>
 
 " Spell checking 
-setlocal spell spelllang=en_us
+" setlocal spell spelllang=en_us

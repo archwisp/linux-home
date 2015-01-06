@@ -19,7 +19,7 @@ nnoremap ,r :!php %<CR>
 nnoremap ,v :!phpcs %<CR>
 
 " Run unit test
-nnoremap ,u :!./bin/runtests %<CR>
+nnoremap ,u :!./vendor/bin/phpunit %<CR>
 
 " Append template
 nnoremap ,b :0r ~/.vim/templates/blank.php<CR>

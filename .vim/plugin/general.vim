@@ -31,8 +31,8 @@ if has("autocmd")
 	\| exe "normal g'\"" | endif
 endif
 
-" Find duplicate lines
-" nmap <F2> :g/^\(.*\)\(\r\?\n\1\)\+$/d<CR>
+" Delete duplicate lines
+" nnoremap ,d :g/^\(.*\)\(\r\?\n\1\)\+$/d<CR>
 
 " Insert a new line without entering insert mode
 
