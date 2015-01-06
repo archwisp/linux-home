@@ -3,7 +3,7 @@
 SEARCH=$1;
 REPLACE=$2;
 
-FILES=$(find -name "*$SEARCH*.php");
+FILES=$(find -name "*$SEARCH*");
 
 for FILE in $FILES;
 do
