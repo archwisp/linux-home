@@ -1,13 +1,13 @@
 [user]
-	name = Bryan C. Geraghty
-   email = bryan@ravensight.org
+    name = Bryan C. Geraghty
+    email = bryan@ravensight.org
 [core]
-   pager =
+    pager =
 [receive]
-   denyNonFastForwards = false
+    denyNonFastForwards = false
 
-[url "ssh://dev.upandrunningsoftware.com/"]
-   pushInsteadOf = git://dev.upandrunningsoftware.com/
+[url "ssh://git.ravensight.org/"]
+    pushInsteadOf = git://git.ravensight.org/
 [alias]
     info = config --local --list
     svn-log = log --name-status
