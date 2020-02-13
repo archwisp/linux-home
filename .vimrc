@@ -13,6 +13,9 @@ Plugin 'git://github.com/joonty/vdebug.git'
 Plugin 'git://github.com/vim-scripts/dbext.vim.git'
 Plugin 'git://github.com/vim-scripts/DBGp-Remote-Debugger-Interface.git'
 Plugin 'git://github.com/vim-scripts/taglist.vim.git'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'MattesGroeger/vim-bookmarks'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
