@@ -14,8 +14,10 @@ Plugin 'git://github.com/vim-scripts/dbext.vim.git'
 Plugin 'git://github.com/vim-scripts/DBGp-Remote-Debugger-Interface.git'
 Plugin 'git://github.com/vim-scripts/taglist.vim.git'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'MattesGroeger/vim-bookmarks'
+
+" Plugin 'plasticboy/vim-markdown'
+" Plugin 'git://github.com/fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,3 +56,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" List the directory the current file resides in
+noremap ,d :e %:p:h<CR>
+
+" Override the filetype for .ts files
+au BufRead,BufNewFile *.ts set filetype=javascript
+
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1

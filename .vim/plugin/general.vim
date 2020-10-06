@@ -1,15 +1,18 @@
 colorscheme koehler
 set guifont=Dina
 
+set mouse-=a
 set nocompatible
+set backspace=indent,eol,start
 
 filetype plugin indent on
 syntax enable
 
 set hlsearch
 set number
+set ruler
 set nowrap
-set textwidth=74
+" set textwidth=74
 set autoindent
 
 " Dan's mandated tab settings
